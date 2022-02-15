@@ -46,7 +46,7 @@ def calc_Stat(data):
 def calc_InAcc(a, b, data):
     (mean, std, std_mean) = calc_Stat(data)
     d_s = a + b*mean
-    d_z = return_T(0.95, len(data))*std_mean
+    d_z = return_T(0.95, len(data)-1)*std_mean
     
     return (d_s, d_z, d_s+d_z)
     
