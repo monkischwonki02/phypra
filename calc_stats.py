@@ -7,7 +7,7 @@ import numpy as np
 # note: the convidence interval is mutual
 #
 # parameters:
-# ci - int : convidence interval
+# ci - float : convidence interval
 # df - int : degrees of freedom
 '''
 def return_T(ci, df):
