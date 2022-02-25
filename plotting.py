@@ -31,7 +31,7 @@ def plot_err(x: np.ndarray,y: np.ndarray,err: np.ndarray, head="", xlbl="", ylbl
 # creates a plot with 'm'-Graphs
 # 
 # parameters:
-# x,y  - np.ndarray (n,m) : m lists with n-datapoints
+# x,y  - np.ndarray (n,m) : n lists with m-datapoints
 # err - np.ndarray (n,m) : errors of data
 # head : title of diagram
 # xlbl : Label of x-Axis
@@ -44,13 +44,12 @@ def plot_err(x: np.ndarray,y: np.ndarray,err: np.ndarray, head="", xlbl="", ylbl
 '''
 def plot_err_mul(x: np.ndarray,y: np.ndarray,err: np.ndarray, head="", xlbl="", ylbl="", legend=[], cl=[]):
     fig, ax1 = plt.subplots(1)
-    for i in range(x.shape[1]):
-        if len(legend) <= x.shape[1]:
-            for _ in range(x.shape[1] - len(legend)):
+    for i in range(x.shape[0]):
+        if len(legend) <= x.shape[0]:
+            for _ in range(x.shape[0] - len(legend)):
                 legend.append("")
         ax1.errorbar(x[i, :], y[i, :], err[i, :], label=legend[i], c=cl[i])
         ax1.scatter(x[i,:], y[i,:], c=cl[i])
-
     ax1.grid()
     ax1.set(xlabel=str(xlbl), ylabel=str(ylbl))
     ax1.legend()
