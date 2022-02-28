@@ -1,36 +1,8 @@
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
-'''
-# transforms 1D-Coordinates with a defined transformation
-#
-# args:
-# x - np.ndarray (n,): coordinates to be transformed
-# transform - function (lambda) : function to transform coordinated 
-#
-# return transformed coordinates
-'''
-def transform(x,transform):
-    x_t = transform(x)
-    return x_t
 
-'''
-# transforms 2D-Coordinates with a defined transformation
-#
-# args:
-# x - np.ndarray (n,): coordinates to be transformed
-# y - np.ndarray (n,): coordinates to be transformed
-# transform - function (lambda) : function to transform coordinated 
-#
-# return:
-# tupel with the transformed coordinates (x_t, y_t)
-# x_t - np.ndarray (n,) : transformed coordinates
-# y_t - np.ndarray (n,) : transformed coordinates
-'''
-def transform_mul(x,y,transform):
-    x_t = transform(x)
-    y_t = transform(y)
-    return (x_t, y_t)
+
 
 '''
 # creates a Linear Regression Model based on x,y of the data
