@@ -6,7 +6,7 @@ import numpy as np
 # and a given degree of freedom
 # note: the convidence interval is mutual
 #
-# parameters:
+# args:
 # ci - float : convidence interval
 # df - int : degrees of freedom
 '''
@@ -17,7 +17,7 @@ def return_T(ci, df):
 # returns the mean, standard deviation, std of mean of the data
 # for the std we use degrees of freedom: n-1 (ddof=1)
 #
-# parameters:
+# args:
 # data - np.ndarray : shape (n,)
 #
 # return:
@@ -33,13 +33,12 @@ def calc_Stat(data):
 '''
 # returns random- and systematitical inaccuracy 
 #
-# parameters:
+# args:
 # a, b - float: variable for systematical inaccuracy (a + b*x)
 # data - np.ndarray : shape (n,)
 #
 # return:
 # d_s, d_z, d_s + d_z as tupel
-# 
 # d_s - float : systematical inaccuracy
 # d_z - float : random inaccuracy
 '''

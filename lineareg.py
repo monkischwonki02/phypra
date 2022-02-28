@@ -3,7 +3,8 @@ import numpy as np
 
 '''
 # transforms 1D-Coordinates with a defined transformation
-# parameters:
+#
+# args:
 # x - np.ndarray (n,): coordinates to be transformed
 # transform - function (lambda) : function to transform coordinated 
 #
@@ -15,7 +16,8 @@ def transform(x,transform):
 
 '''
 # transforms 2D-Coordinates with a defined transformation
-# parameters:
+#
+# args:
 # x - np.ndarray (n,): coordinates to be transformed
 # y - np.ndarray (n,): coordinates to be transformed
 # transform - function (lambda) : function to transform coordinated 
@@ -33,7 +35,7 @@ def transform_mul(x,y,transform):
 '''
 # creates a Linear Regression Model based on x,y of the data
 # 
-# parameters:
+# args:
 # x - np.ndarray (n,) : x-coordinates of the data
 # y - np.ndarray (n,) : y-coordinates of the data
 #
@@ -48,7 +50,7 @@ def create_Lin_Model(x,y):
 '''
 # calculate the std of y, the slope (a) and the intercept (b) of the regression line
 #
-# parameters:
+# args:
 # x,y - np.ndarray (n,) : x,y of data (same as the data to train the regression-model)
 # a - float : slope of regression line
 # b - float : intercept of regression line
