@@ -9,8 +9,9 @@ import numpy as np
 #
 # return transformed coordinates
 '''
-def transform_Coord(x,transform):
-    return transform(x)
+def transform(x,transform):
+    x_t = transform(x)
+    return x_t
 
 '''
 # transforms 2D-Coordinates with a defined transformation
@@ -24,7 +25,7 @@ def transform_Coord(x,transform):
 # x_t - np.ndarray (n,) : transformed coordinates
 # y_t - np.ndarray (n,) : transformed coordinates
 '''
-def transform_Coord(x,y,transform):
+def transform_mul(x,y,transform):
     x_t = transform(x)
     y_t = transform(y)
     return (x_t, y_t)
@@ -61,3 +62,4 @@ def calc_std(x,y,a,b):
     s_b = s_y * np.sqrt(np.sum(x**2) / (len(x) * np.sum(x**2) - np.sum(x)**2))
 
     return (s_y, s_a, s_b)
+
