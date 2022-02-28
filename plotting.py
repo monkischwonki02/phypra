@@ -4,7 +4,7 @@ import numpy as np
 '''
 # creates a plot with errorbars
 #
-# parameters:
+# args:
 # x,y - np.ndarray (n,) : data
 # err - np.ndarray (n,) : error of y
 # head : title of diagram
@@ -30,7 +30,7 @@ def plot_err(x: np.ndarray,y: np.ndarray,err: np.ndarray, head="", xlbl="", ylbl
 '''
 # creates a plot with 'm'-Graphs
 # 
-# parameters:
+# args:
 # x,y  - np.ndarray (n,m) : n lists with m-datapoints
 # err - np.ndarray (n,m) : errors of data
 # head : title of diagram
@@ -55,4 +55,13 @@ def plot_err_mul(x: np.ndarray,y: np.ndarray,err: np.ndarray, head="", xlbl="", 
     ax1.legend()
     fig.suptitle(str(head))
     return fig
-
+'''
+# saves the plot as an image
+#
+# args:
+# fig (plt.Figure) : matplotlib figure with plot
+# path : path where the function saves the plot
+# name : name of image
+'''
+def save_plot(fig: plt.Figure, path: str, name: str, f: str):
+    fig.savefig(path + name + "." + f, format=f)
