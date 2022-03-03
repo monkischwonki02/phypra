@@ -1,9 +1,6 @@
 from sklearn.linear_model import LinearRegression
 import numpy as np
 
-
-
-
 '''
 # creates a Linear Regression Model based on x,y of the data
 # 
@@ -14,7 +11,7 @@ import numpy as np
 # return
 # tupel with the slope (a) and the intercept (b) of the regression-line (y = a*x + b)
 '''
-def create_Lin_Model(x,y):
+def create_lin_model(x,y):
     model = LinearRegression()
     model.fit(x.reshape(-1,1), y.reshape(-1,1))
     return (model.coef_.reshape(-1)[0], model.intercept_[0])
@@ -36,4 +33,3 @@ def calc_std(x,y,a,b):
     s_b = s_y * np.sqrt(np.sum(x**2) / (len(x) * np.sum(x**2) - np.sum(x)**2))
 
     return (s_y, s_a, s_b)
-

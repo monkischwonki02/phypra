@@ -23,7 +23,7 @@ def return_T(ci, df):
 # return:
 # mean, std and std_mean in a tupel
 '''
-def calc_Stat(data):
+def calc_stat(data):
     mean = np.mean(data)
     std = np.std(data, ddof=1) 
     std_mean = std/np.sqrt(len(data))
@@ -42,8 +42,8 @@ def calc_Stat(data):
 # d_s - float : systematical inaccuracy
 # d_z - float : random inaccuracy
 '''
-def calc_InAcc(a, b, data):
-    (mean, std, std_mean) = calc_Stat(data)
+def calc_inacc(a, b, data):
+    (mean, std, std_mean) = calc_stat(data)
     d_s = a + b*mean
     d_z = return_T(0.95, len(data)-1)*std_mean
     
