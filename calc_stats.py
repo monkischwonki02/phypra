@@ -10,7 +10,7 @@ import numpy as np
 # ci - float : convidence interval
 # df - int : degrees of freedom
 '''
-def return_T(ci, df):
+def return_t(ci, df):
     return scs.t.ppf((1+ci)/2, df)
 
 '''
