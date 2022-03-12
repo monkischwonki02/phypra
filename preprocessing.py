@@ -28,7 +28,7 @@ def split_data(data: np.ndarray, x_rows: list, y_rows: list):
 #
 # args:
 # x - np.ndarray (n,): coordinates to be transformed
-# transform - function (lambda) : function to transform coordinated 
+# transform - function (lambda) : function to transform coordinates 
 #
 # return transformed coordinates
 '''
@@ -41,7 +41,7 @@ def transform_1d(x: np.ndarray, transform):
 # args:
 # x - np.ndarray (n,): coordinates to be transformed
 # y - np.ndarray (n,): coordinates to be transformed
-# transform - function (lambda) : function to transform coordinated 
+# transform - function (lambda) : function to transform coordinates 
 #
 # return:
 # tupel with the transformed coordinates (x_t, y_t)
